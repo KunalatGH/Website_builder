@@ -1,1 +1,0 @@
-const filetoDownload = 'bigfile.zip';
