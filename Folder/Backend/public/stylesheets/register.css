@@ -1,107 +1,142 @@
-.form-box {
-    /* display: block; */
-    margin-left: 550px;
-    margin-top: 50px;
-    margin-right: 400px;
-    
-    max-width: 300px;
-    background: #f1f7fe;
-    /* overflow: hidden;
-    border-radius: 16px;
-    color: #010101; */
-  
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-      box-sizing: border-box;
-      border-radius: 10px;
+body {
+  background-color: #e8e8e8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto; /* Center the form horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 15px; /* Increase padding for better appearance */
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  font-size: 16px; /* Adjust font size */
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
   }
-  
-  .form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 32px 24px 24px;
-    gap: 16px;
-    text-align: center;
-    background: rgba(0, 0, 0, .9);
-    
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
   }
-  
-  
-  /*Form text*/
-  .title {
-    font-weight: bold;
-    font-size: 1.6rem;
-    color:#fff;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    color: #7e7e7e;
-  }
-  
-  /*Inputs box*/
-  .form-container {
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #fff;
-    margin: 1rem 0 0.5rem;
-    width: 100%;
-  }
-  
-  .input {
-    background: none;
-    border: 0;
-    outline: 0;
-    height: 40px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-    padding: 8px 15px;
-  }
-  
-  .form-section {
-    padding: 16px;
-    font-size: 0.95rem;
-    background: rgba(0, 0, 0, .9);
-    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
-    color:#fff;
-    
-  }
-  
-  .form-section a {
-    font-weight: bold;
-    color: #0066ff;
-    transition: color 0.3s ease;
-  }
-  
-  .form-section a:hover {
-    color: #005ce6;
-    text-decoration: underline;
-  }
-  
-  /*Button*/
-  .form button {
-    /* background-color: #0066ff; */
-    background-color: #3d3d3d;
-    color: #fff;
-    border: 0;
-    border-radius: 24px;
-    /* transition: 2s ease-in-out 0 ; */
-  
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 10px 20px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 16px;
-      text-decoration: none;
-      text-transform: uppercase;
-  }
-  
-  .form button:hover {
-    background-color: #fff;
-    color:#272727;
-  }
-  .error{
-    color: red;
-  }
+}

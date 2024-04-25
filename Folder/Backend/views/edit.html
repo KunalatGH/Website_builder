@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Form</title>
-    <link rel="stylesheet" href="/Website_builder/Folder/Backend/public/stylesheets/formData.css">
+    <link rel="stylesheet" href="/public/stylesheets/formData.css">
    
 </head>
 <body>
-    <div class="">
+    <div class="navbar">
         <h3>Resume-Builder</h3>
-        <div class="">
+        <div class="in_nav">
             <a class="" href="/">Home</a>
             <a class="" href="/register">Register</a>
             <a class="" href="/logout">Logout</a>
@@ -20,7 +20,7 @@
         <form action="/edit" method="post">
             <div class="container">
                 <div class="inner">
-                    <div class="heading">
+                    <div class="header">
                         <h1>Personal Details</h1>
                     </div>
                     <div class="flex_box_1">
@@ -28,7 +28,6 @@
                             <label class="label">FIrst Name</label>
                             <input autocomplete="off" name="Email" id="Email" class="input" type="email">
                             <div></div></div>
-                           
                     </div>
                     <div class="flex_box_1">
                         <div class="input-group">
@@ -61,7 +60,7 @@
                                 isRequired
                                 label="Description"
                                 labelPlacement="outside"
-                                placeholder="Enter here" >
+                                 >
                             </textarea>
                             </div>
                         </div>
@@ -78,24 +77,23 @@
                                 isRequired
                                 label="Description"
                                 labelPlacement="outside"
-                                placeholder="Enter here"
-                                class="max-w-xs">
+                                >
                             </textarea>
                         </div>
                     </div>
                     <div class="inner">
-                        <div class="heading">
+                        <div class="heading" id="heading">
                             <h1>Skills</h1>
                             <p>
-                                Choose 5 important skills that show you fit the position.Make sure they match the key skills mentioned in the job listing.
+                            Choose 5 important skills that show you fit the position.Make sure they match the key skills mentioned in the job listing.
                             </p>
-                            <div class="skills-container">
-                                <div class="form">
+                            <div class="sentences" >
+                                
                                     <textarea 
                                     isRequired
                                     label="Description"
                                     labelPlacement="outside"
-                                    placeholder="Enter here">
+                                    >
                                 </textarea>
                                     <button type="button" class="add-skill-button">Add Skill</button>
                                 </div>
