@@ -94,6 +94,7 @@ h2 {
 .para {
   /* background-color: burlywood; */
   width: 553px;
+  height: 5rem;
   margin-top: 10%;
   margin-left: 10%;
   align-items: end;
@@ -103,13 +104,16 @@ h2 {
 }
 
 .image_1{
-  font-size: larger;
+  position: relative;
+  margin-left: 50rem;
+  margin-top: -10rem;
   width: 29rem;
-  height: 36rem;
-  /* background-blend-mode: color; */
+  height: 37rem;
+
 }
 .image_1 img{
-  
+  border-radius: 12rem;
+  filter: drop-shadow(5px 20px 40px grey);
   width: inherit;
   height: inherit;
 }
@@ -118,7 +122,6 @@ h2 {
   color: black;
   font-size: 20px;
   width: 432px;
-
   height: 67px;
   margin-left: 16%;
   margin-top: 1.5%;
