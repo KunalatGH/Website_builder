@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Form</title>
-    <link rel="stylesheet" href="/public/stylesheets/formData.css">
+    <link rel="stylesheet" href="/Folder/Backend/public/stylesheets/formData.css">
    
 </head>
 <body>
@@ -26,7 +26,7 @@
                     <div class="flex_box_1">
                         <div class="input-group">
                             <label class="label">FIrst Name</label>
-                            <input autocomplete="off" name="Email" id="Email" class="input" type="email">
+                            <input class="input" type="text">
                             <div></div></div>
                     </div>
                     <div class="flex_box_1">
@@ -87,17 +87,16 @@
                             <p>
                             Choose 5 important skills that show you fit the position.Make sure they match the key skills mentioned in the job listing.
                             </p>
-                            <div class="sentences" >
-                                
-                                    <textarea 
-                                    isRequired
-                                    label="Description"
-                                    labelPlacement="outside"
-                                    >
-                                </textarea>
-                                    <button type="button" class="add-skill-button">Add Skill</button>
-                                </div>
-                            </div>
+                            <div class="input-container">
+                                <input type="text" name="text" class="input" placeholder="Add skill">
+                                <div class="highlight"></div>
+                              </div>
+                              
+                            <div class="input-container">
+                                <input type="text" name="text" class="input" placeholder="Add skill">
+                                <div class="highlight"></div>
+                              </div>
+                              
                         </div>
                     </div>
                 </div>
